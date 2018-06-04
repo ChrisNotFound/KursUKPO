@@ -66,7 +66,23 @@ namespace testswhite
             Assert.AreEqual("00000000000010011", leb.Text);
             window.Close();
         }
-        
+        [TestMethod]
+        public void TestMethodFindRoute4()
+        {
+            var tbX1 = window.Get<TextBox>(SearchCriteria.ByAutomationId("textBox1"));
+            var tbY1 = window.Get<TextBox>(SearchCriteria.ByAutomationId("textBox2"));
+            var tbX2 = window.Get<TextBox>(SearchCriteria.ByAutomationId("textBox3"));
+            var tbY2 = window.Get<TextBox>(SearchCriteria.ByAutomationId("textBox4"));
+            tbX1.Text ="15";
+            tbY1.Text = "18";
+            tbX2.Text = "3";
+            tbY2.Text = "2";
+            var butt = window.Get<Button>(SearchCriteria.ByAutomationId("button2"));
+            butt.Click();
+            var leb = window.Get<Label>(SearchCriteria.ByAutomationId("label6"));
+            Assert.AreEqual("00000000000010011", leb.Text);
+            window.Close();
+        }
 
         [TestMethod]
         public void TestMethodEnterChar()
