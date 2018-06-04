@@ -80,7 +80,7 @@ namespace testswhite
             var butt = window.Get<Button>(SearchCriteria.ByAutomationId("button2"));
             butt.Click();
             var leb = window.Get<Label>(SearchCriteria.ByAutomationId("label6"));
-            Assert.AreEqual("00000000000010011", leb.Text);
+            Assert.AreEqual("5555655565556655", leb.Text);
             window.Close();
         }
 
